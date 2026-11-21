@@ -179,6 +179,10 @@ The test suite uses only the standard library, so no install step is needed.
 The extractor was validated against 60 real projects: 194 distinct sample
 references, with zero `.wav`-like strings left unmatched.
 
+## Contact
+
+Suggestions and bug reports: **krinoho2007@gmail.com**.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).

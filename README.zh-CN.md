@@ -159,6 +159,10 @@ python -m unittest discover -s tests -t . -v
 提取器在 60 个真实工程上跑过：194 条不重复的采样引用，没有一条 `.wav` 类字符串
 被漏掉。
 
+## 联系方式
+
+有建议，或者发现 bug，发邮件到 **krinoho2007@gmail.com**。
+
 ## 许可证
 
 MIT，见 [LICENSE](LICENSE)。
