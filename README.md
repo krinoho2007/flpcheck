@@ -2,6 +2,8 @@
 
 [![tests](https://github.com/krinoho2007/flpcheck/actions/workflows/tests.yml/badge.svg)](https://github.com/krinoho2007/flpcheck/actions/workflows/tests.yml)
 
+**English** | [简体中文](README.zh-CN.md)
+
 Find the samples your FL Studio project is missing.
 
 FL Studio references samples by absolute path and has no equivalent of
