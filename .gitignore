@@ -1,0 +1,19 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+
+# Test and tool scratch space
+.test-tmp/
+.demo/
+.pytest_cache/
+
+# Editors
+.vscode/
+.idea/
