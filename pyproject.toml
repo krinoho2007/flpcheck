@@ -7,8 +7,9 @@ name = "flpcheck"
 version = "0.1.0"
 description = "Find the samples your FL Studio project is missing."
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 license = { text = "MIT" }
+authors = [{ name = "Krino Ho" }]
 keywords = ["fl-studio", "flp", "music-production", "audio", "cli"]
 classifiers = [
   "Development Status :: 3 - Alpha",
@@ -18,6 +19,10 @@ classifiers = [
   "Operating System :: Microsoft :: Windows",
   "Operating System :: MacOS",
   "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
   "Topic :: Multimedia :: Sound/Audio",
 ]
 dependencies = []

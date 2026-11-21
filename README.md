@@ -1,5 +1,7 @@
 # flpcheck
 
+[![tests](https://github.com/krinoho2007/flpcheck/actions/workflows/tests.yml/badge.svg)](https://github.com/krinoho2007/flpcheck/actions/workflows/tests.yml)
+
 Find the samples your FL Studio project is missing.
 
 FL Studio references samples by absolute path and has no equivalent of
@@ -54,21 +56,16 @@ someone's work. v0.1 only tells you the truth.
 
 ## Install
 
-```bash
-uv pip install flpcheck
-# or
-pip install flpcheck
-```
-
-Requires Python 3.9+. No runtime dependencies.
-
-Until the first release on PyPI, install from a clone:
+`flpcheck` is not on PyPI yet. Install from a clone:
 
 ```bash
-git clone https://github.com/<you>/flpcheck
+git clone https://github.com/krinoho2007/flpcheck
 cd flpcheck
 uv pip install -e .
+# or: pip install -e .
 ```
+
+Requires Python 3.10+. No runtime dependencies.
 
 ## Usage
 
@@ -170,7 +167,7 @@ Be aware of what v0.1 does not do:
 ## Development
 
 ```bash
-git clone https://github.com/<you>/flpcheck
+git clone https://github.com/krinoho2007/flpcheck
 cd flpcheck
 python -m unittest discover -s tests -t . -v
 ```
