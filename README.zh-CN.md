@@ -4,10 +4,10 @@
 
 [English](README.md) | **简体中文**
 
-找出 FL Studio 工程里丢了的采样。
+`flpcheck` 帮你找出 FL Studio 工程里丢了的采样。
 
-FL Studio 用绝对路径记采样，又没有 Ableton 的 *Collect All and Save*。工程一挪、
-采样库一整理、或者打开别人发来的工程，满屏都是 *sample not found*，而且不告诉你
+FL Studio 用绝对路径记采样，但其并没有 Ableton 的 *Collect All and Save*。每当工程一挪、
+采样库一整理或者是打开别人发来的工程，满屏都是 *sample not found*，却不告诉你
 丢的是哪几个。
 
 `flpcheck` 读一遍 `.flp`，把里面引用的采样全列出来，标出哪些已经不在原位，再帮你
@@ -32,7 +32,7 @@ song.flp
       not checked: this path uses an FL Studio macro. Map it with --macro NAME=DIR
 ```
 
-结果分三种状态，不是两种：
+结果分三种状态，如下所示：
 
 | 标记 | 状态 | 含义 |
 | --- | --- | --- |
@@ -40,9 +40,8 @@ song.flp
 | ✗ | missing | 绝对路径，但文件不在了 |
 | ? | unresolved | 宏路径，在你说明宏指向哪之前查不了 |
 
-为什么要多这一个「未检查」？因为工厂包的采样是用 `%FLStudioFactoryData%` 这种宏记的，
-而真实工程里这类引用比盘符路径多好几倍。全算成「缺失」，你一打开就是几百个红叉，
-全是假的。所以查不了的就老实说查不了。
+Q：为什么要多这一个「未检查」？A：因为工厂包的采样是用 `%FLStudioFactoryData%` 这种宏记的，
+而真实工程里这类引用比盘符路径多好几倍。全算成「缺失」，一打开就是几百个红叉。所以查不了的就实话实说查不了。
 
 ## 它不会碰你的文件
 
@@ -53,7 +52,7 @@ song.flp
 
 ## 安装
 
-还没发到 PyPI，从源码装：
+还没发布到 PyPI，目前只可以从源码装：
 
 ```bash
 git clone https://github.com/krinoho2007/flpcheck
@@ -83,7 +82,7 @@ flpcheck check ~/Projects/song.flp --search-root "E:\Samples" --search-root "D:\
 | `--max-index-files N` | 每个搜索根最多索引多少文件（默认 `200000`）。 |
 | `--json` | 输出 JSON，给脚本用。 |
 
-要查工厂包，把宏指到 FL Studio 的数据目录：
+要查工厂包的时候，把宏指到 FL Studio 的数据目录：
 
 ```bash
 flpcheck check song.flp --macro "%FLStudioFactoryData%=C:\Program Files\Image-Line\FL Studio 21\Data"
@@ -142,7 +141,7 @@ v0.1 明确不做的：
 ## 后续计划
 
 - [ ] 自动找 `%FLStudioFactoryData%`。我测试那台机器上它指的是 FL Studio 安装目录
-      （有 `FL64.exe` 那个），不是里面的 `Data` 子目录，别照着 `Data` 写死。
+      （有 `FL64.exe`），不是里面的 `Data` 子目录。
 - [ ] 插件清单，用 [PyFLP](https://github.com/demberto/PyFLP)
 - [ ] 认出保存工程的 FL Studio 版本
 - [ ] 可选：输出一份重定位方案，不只打印候选路径
